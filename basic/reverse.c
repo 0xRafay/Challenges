@@ -1,6 +1,9 @@
 #include <stdio.h>
 int main() {
-  char s[100] = "Hello";
+  char s[100];
+
+  printf("Enter String: ");
+  scanf("%99s", s);
 
   // not trying to use the lib,
   // so have to count manually
