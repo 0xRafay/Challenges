@@ -24,4 +24,5 @@ int main() {
   } else {
     printf("%s is not a Palindrome!", ch);
   }
+  return 0;
 }
