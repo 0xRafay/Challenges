@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    int arr[5] = {1, 6, 1/20, 4, 5};
+    int arr[5] = {1, 6, 20, 4, 5};
 
     int len = 0;
     while (arr[len] != '\0') {
