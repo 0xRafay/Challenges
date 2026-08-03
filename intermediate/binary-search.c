@@ -6,10 +6,8 @@ int main() {
     printf("Num to find: ");
     scanf("%d", &num_to_find);
 
-    int len = 0;
-    while (arr[len] != '\0') {
-        len++;
-    }
+    int len = sizeof(arr)/sizeof(arr[0]);
+
     printf("len: %d\n", len);
 
     int left = 0;
