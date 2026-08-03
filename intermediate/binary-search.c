@@ -6,7 +6,7 @@ int main() {
     printf("Num to find: ");
     scanf("%d", &num_to_find);
 
-    int len = sizeof(arr)/sizeof(arr[0]);
+    int len = sizeof(arr) / sizeof(arr[0]);
 
     printf("len: %d\n", len);
 
@@ -28,8 +28,6 @@ int main() {
             left = mid + 1;
         } else if (arr[mid] > num_to_find) {
             right = mid - 1;
-        } else {
-            break;
         }
     }
     if (found) {
