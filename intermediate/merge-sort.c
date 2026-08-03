@@ -13,31 +13,30 @@ void merge(int arr[], int left, int right, int mid) {
     for (int j = 0; j < size_of_right_subarray; j++) {
         temp_right[j] = arr[mid + 1 + j];
     }
-    int index_l = 0;
-    int index_r = 0;
+    int i = 0;
+    int j = 0;
 
     int merged_subarray = left;
 
-    while (index_l < size_of_left_subarray &&
-           index_r < size_of_right_subarray) {
+    while (i < size_of_left_subarray && j < size_of_right_subarray) {
 
-        if (temp_left[index_l] <= temp_right[index_r]) {
-            arr[merged_subarray] = temp_left[index_l];
-            index_l++;
+        if (temp_left[i] <= temp_right[j]) {
+            arr[merged_subarray] = temp_left[i];
+            i++;
         } else {
-            arr[merged_subarray] = temp_right[index_r];
-            index_r++;
+            arr[merged_subarray] = temp_right[j];
+            j++;
         }
         merged_subarray++;
     }
-    while (index_l < size_of_left_subarray) {
-        arr[merged_subarray] = temp_left[index_l];
-        index_l++;
+    while (i < size_of_left_subarray) {
+        arr[merged_subarray] = temp_left[i];
+        i++;
         merged_subarray++;
     }
-    while (index_r < size_of_right_subarray) {
-        arr[merged_subarray] = temp_right[index_r];
-        index_r++;
+    while (j < size_of_right_subarray) {
+        arr[merged_subarray] = temp_right[j];
+        j++;
         merged_subarray++;
     }
 }
@@ -55,6 +54,7 @@ void mergeSort(int arr[], int left, int right) {
         merge(arr, left, right, mid);
     }
 }
+
 int main() {
     int arr[7] = {38, 27, 69, 20, 30, 43, 10};
     int len = sizeof(arr) / sizeof(arr[0]);
