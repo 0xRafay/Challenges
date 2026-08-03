@@ -13,6 +13,7 @@ void merge(int arr[], int left, int right, int mid) {
     for (int j = 0; j < size_of_right_subarray; j++) {
         temp_right[j] = arr[mid + 1 + j];
     }
+    // indices for left and right sub-arrays
     int i = 0;
     int j = 0;
 
