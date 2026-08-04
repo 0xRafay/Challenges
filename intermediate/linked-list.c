@@ -41,7 +41,11 @@ int main() {
 
     Node *current = head;
 
-    printf("Head: %d\n", head->data);
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
 
     free(head);
     return 0;
