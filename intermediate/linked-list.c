@@ -22,5 +22,7 @@ int main() {
     Node* head = creat_node(10);
 
     printf("Head: %d\n", head->data);
+
+    free(head);
     return 0;
 }
