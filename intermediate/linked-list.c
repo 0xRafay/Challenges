@@ -21,10 +21,12 @@ void append(int data, Node **head) {
     Node *new_node = create_node(data);
 
     Node *current = *head;
+
     while (current->next != NULL) {
         current = current->next;
     }
     current->next = new_node;
+    new_node->prev = current;
 }
 
 // why Node** instead of Node*?
