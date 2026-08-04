@@ -34,10 +34,11 @@ void append(int data, Node **head) {
     new_node->prev = current;
 }
 
-// why Node** instead of Node*?
-// a double pointers lets us modify the original pointer
-// Node* head, would only be a copy of head,
-// Node** head, means the original head
+/* why Node** instead of Node*?
+ * a double pointers lets us modify the original pointer
+ * Node* head, would only be a copy of head,
+ * Node** head, means the original head
+ */
 void preappend(int data, Node **head) {
 
     Node *new_node = create_node(data);
