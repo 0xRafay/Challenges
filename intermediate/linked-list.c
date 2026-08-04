@@ -30,6 +30,15 @@ void preappend(int data, Node **head) {
     *head = new_node;
 }
 
+void free_all(Node *head) {
+    Node *current = head;
+    while (current != NULL) {
+        Node *next = current->next;
+        free(current);
+        current = next;
+    }
+}
+
 int main() {
 
     // theoretically this is the starting of the linked list
@@ -47,6 +56,6 @@ int main() {
     }
     printf("\n");
 
-    free(head);
+    free_all(head);
     return 0;
 }
