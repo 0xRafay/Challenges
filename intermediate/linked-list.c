@@ -16,6 +16,17 @@ Node *create_node(int data) {
 
     return allocatedNode;
 }
+
+void append(int data, Node **head) {
+    Node *new_node = create_node(data);
+
+    Node *current = *head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    current->next = new_node;
+}
+
 // why Node** instead of Node*?
 // a double pointers lets us modify the original pointer
 // Node* head, would only be a copy of head,
@@ -47,6 +58,9 @@ int main() {
     preappend(590, &head);
     preappend(20, &head);
     preappend(40, &head);
+
+    append(59, &head);
+    append(69, &head);
 
     Node *current = head;
 
