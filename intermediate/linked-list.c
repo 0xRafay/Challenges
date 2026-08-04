@@ -43,8 +43,6 @@ void preappend(int data, Node **head) {
 
     Node *new_node = create_node(data);
 
-    // we are trying to move the initial head one ahead, and add the new node as
-    // the new head
     new_node->next = *head;
     *head = new_node;
 }
