@@ -22,6 +22,11 @@ void append(int data, Node **head) {
 
     Node *current = *head;
 
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
+
     while (current->next != NULL) {
         current = current->next;
     }
